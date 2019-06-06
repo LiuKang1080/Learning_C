@@ -2,8 +2,7 @@
 #include <stdlib.h>
 
 // Hello World test in C
-int main()
-{
+int main() {
     printf("Hello World!");
     return 0;
 }
