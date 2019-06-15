@@ -12,3 +12,4 @@ int main() {
 // All C programs contain one main() function. main() is the entry point into the program. 
 // Case sensitivity matters in C. 
 // All statements end with a semi-colon ;
+// main is a reserved keyword, it cannot be declared as a variable. 
