@@ -31,6 +31,15 @@ int main() {
         printf("%d \n", i*j);
     }
 
+    // The , operator:
+    for(int x=1, y=1; x<=5, y<=8; x++, y++) {
+        printf("%d%d \t", x,y);
+    }
+    // Notice the ending condition, X<=5 happens before Y<=8, but all 8 numbers will print. The , operator will evaluates all operands in order
+    // the result of the , operator will be the value of the right operand. 
+    // ex) f(a),f(b) here f(a) will be evaluated first, and the ending result will be the value of f(b).
+
+
     // Infinite loop, notice the second ; in the for loop statement, it is required for valid for loop syntax. No iterator count change is provided
     // int count = 5;
     // for(int i=1; i<=count;) {
