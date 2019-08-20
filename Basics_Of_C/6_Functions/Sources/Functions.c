@@ -44,9 +44,9 @@ return_type function_name (parameters) {
 
 /*
 Create 3 functions:
-1) Greatest common divisor - given 2 ints return the greatest common divisor.
+1) Greatest common divisor - given 2 integers return the greatest common divisor.
 2) Absolute Value - Given a number positive or negative return the absolute value of that number. 
-3) Square Root - write a square root function, must deal with both pasitive and negative cases.
+3) Square Root - Write a square root function, must deal with both positive and negative cases (if negative return -1.0).
 */
 
 
@@ -88,7 +88,7 @@ float square_root(float x) {
     const float epsilon = 0.00001;
     float guess = 1.0;
 
-    // check to see if the entered value is negative
+    // check to see if the entered value is negative, if negative return -1.0
     if (x < 0) {
         printf("Negative argument provided to Square Root! \n");
         return -1.0;
