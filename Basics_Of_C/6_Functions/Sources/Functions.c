@@ -59,7 +59,7 @@ int greatest_common_divisor(int x, int y) {
 
     for (int i=1; i <= x && i <= y; ++i) {
         // check to see if i is a factor of both x and y
-        if (x%i == 0 && y%i ==0) {
+        if (x%i == 0 && y%i == 0) {
             greatest_common_divisor = i;
         }
     }
