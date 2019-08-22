@@ -29,24 +29,24 @@ return_type function_name (parameters) {
   - If the function accepts no arguments, generally we use the void keyword as the parameter.
 
 - Global and Local scoping:
-  - Variables defined in a function are known as automatic local variables, they are automatically created everytime the 
-    function is called.
-  - Local variables: Can only be accessed by the function in which it is defined in, the variable cannot be accessed by other 
-    functions.
-  - Global Variables: Can be accessed by any function in the program. Global variables are defined outside any function generally
-    at the beginning of the source file. Any function can change the value of the global varaible. If there is a local varaible 
-    with the same name as the global varaible, then the local variable will replace the global varaible within the function.
-  - Generally we want to avoid global variables due to coupling (dependecies) ex) if we have multiple functions using a single 
-    global variable it could mean that all those functions are dependent on each other. It becomes harder to debug code, even if the 
-    bug is found it could be difficult to fix problems. It is recommended that global varaibles should be avoided, if we need to pass
-    data into functions we should just use parameters / arguments or if there is a lot of data then structs. 
+    - Variables defined in a function are known as automatic local variables, they are automatically created everytime the 
+      function is called.
+    - Local variables: Can only be accessed by the function in which it is defined in, the variable cannot be accessed by other 
+      functions.
+    - Global Variables: Can be accessed by any function in the program. Global variables are defined outside any function generally
+      at the beginning of the source file. Any function can change the value of the global varaible. If there is a local varaible 
+      with the same name as the global varaible, then the local variable will replace the global varaible within the function.
+    - Generally we want to avoid global variables due to coupling (dependecies) ex) if we have multiple functions using a single 
+      global variable it could mean that all those functions are dependent on each other. It becomes harder to debug code, even if the 
+      bug is found it could be difficult to fix problems. It is recommended that global varaibles should be avoided, if we need to pass
+      data into functions we should just use parameters / arguments or if there is a lot of data then structs. 
 */
 
 /*
 Create 3 functions:
-1) Greatest common divisor - given 2 integers return the greatest common divisor.
-2) Absolute Value - Given a number positive or negative return the absolute value of that number. 
-3) Square Root - Write a square root function, must deal with both positive and negative cases (if negative return -1.0).
+    1) Greatest common divisor - given 2 integers return the greatest common divisor.
+    2) Absolute Value - Given a number positive or negative return the absolute value of that number. 
+    3) Square Root - Write a square root function, must deal with both positive and negative cases (if negative return -1.0).
 */
 
 
@@ -103,7 +103,6 @@ float square_root(float x) {
 } 
 
 
-// Main Function
 int main() {
 
     // test the GCD function 

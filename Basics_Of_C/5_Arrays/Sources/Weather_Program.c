@@ -1,13 +1,14 @@
 /* 
 Weather Program challenge:
-- Create a program that takes in rain fall data to calculate the average total rain fall over the course of 5 years. 
-- Find the total rain fall for each year.
-- Rain fall data are floats within a 2D array.
-- Rain fall data will cover each of the 12 months, over the course of 5 years
+    - Create a program that takes in rain fall data to calculate the average total rain fall over the course of 5 years. 
+    - Find the total rain fall for each year.
+    - Rain fall data are floats within a 2D array.
+    - Rain fall data will cover each of the 12 months, over the course of 5 years
 */
 
 
 #include <stdio.h>
+
 
 int main() {
 
