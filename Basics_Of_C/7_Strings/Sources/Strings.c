@@ -52,7 +52,7 @@ Strings in C:
 
 
 // Indexing an array to see where the Null Terminator is:
-void small_array(void) {
+void large_array(void) {
     // We will create a large array and only populate the first few indicies with a string.
     char my_word[50] = {"Hello"};
     // Check to see where the null terminator is:
