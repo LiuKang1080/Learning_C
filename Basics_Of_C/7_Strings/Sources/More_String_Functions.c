@@ -30,12 +30,16 @@ Analyzing Strings:
     - isalpha()     Test to see if character is alpha character
     - isdigit()     Test to see if character is a digit 
 
+    NOTE: These functions are not located in string.h! They are located in ctype.h
+    #include <ctype.h>
+
     generally these functions will return pointers.
 */
 
 
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 
 int main() {
