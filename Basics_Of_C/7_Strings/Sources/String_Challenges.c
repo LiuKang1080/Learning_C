@@ -8,14 +8,19 @@
 2) Write a function to concatenate 2 character strings
     - cannot use the strcat() function 
 
-3) Write a function that compares 2 functions
-    - takes 2 arguments 
-    - return a boolean 
+3) Write a function that compares 2 strings to see if they are equal
+    - takes in 2 arguments 
+    - returns a boolean
+
+4) Write a function that takes in an array of character strings and reverses it 
+    - can use the strlen(), strcpy(), and the other standard string functions that are in the string library
+    - #include <string.h>
 */
 
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 
 
 // define string length function for challenge 1
@@ -46,7 +51,7 @@ void concat_function (char result[], const char str1[], const char str2[]) {
     result[i + j] = '\0'; 
 }
 
-// compare function for challege 3
+//  define compare function for challege 3
 bool compare_function(const char str1[], const char str2[]) {
     int i = 0;
     bool is_equal = false;
@@ -63,6 +68,24 @@ bool compare_function(const char str1[], const char str2[]) {
 
     return is_equal;
 }
+
+// define string reverse function for challenge 4
+char string_reverse(const char str1[]) {
+    // initialize local variables 
+    int i;
+    int length;
+
+    length = strlen(str1);
+    // printf("%d", length);
+
+    // printf("Before reverse \n");
+    // printf("%s", str1);
+
+    for (i=length; i>=0; i--) {
+        printf("%c", str1[i]);
+    }
+}
+
 
 
 int main() {
@@ -84,6 +107,9 @@ int main() {
     // return value: 0 = false and 1 = true
     printf("%d \n", compare_function(sentence_3, sentence_4));
     printf("%d \n", compare_function(sentence_3, sentence_5));
+
+    // test string reverse for challenge 4
+    string_reverse(sentence_1);
 
     return 0;
 }
