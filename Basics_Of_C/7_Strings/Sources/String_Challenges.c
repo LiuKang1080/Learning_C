@@ -89,7 +89,6 @@ void string_reverse(const char str1[]) {
 }
 
 
-
 int main() {
     const char sentence_1[] = "Hello World, my name is Shiva!";
     const char sentence_2[] = "Programming is awesome!";
