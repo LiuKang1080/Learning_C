@@ -19,6 +19,7 @@
 
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 
@@ -70,7 +71,7 @@ bool compare_function(const char str1[], const char str2[]) {
 }
 
 // define string reverse function for challenge 4
-char string_reverse(const char str1[]) {
+void string_reverse(const char str1[]) {
     // initialize local variables 
     int i;
     int length;
@@ -80,8 +81,9 @@ char string_reverse(const char str1[]) {
 
     // printf("Before reverse \n");
     // printf("%s", str1);
-
-    for (i=length; i>=0; i--) {
+    
+    // i = length-1 we do this because the length itself includes the Null Terminator.
+    for (i = length - 1; i >= 0; i--) {
         printf("%c", str1[i]);
     }
 }
