@@ -52,7 +52,7 @@ void concat_function (char result[], const char str1[], const char str2[]) {
     result[i + j] = '\0'; 
 }
 
-//  define compare function for challege 3
+// define compare function for challege 3
 bool compare_function(const char str1[], const char str2[]) {
     int i = 0;
     bool is_equal = false;
