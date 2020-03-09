@@ -51,11 +51,42 @@
 
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
+// #include <stdlib.h>
+// #include <stddef.h>
 
 
 int main() {
+
+    // Small example of pointers:
+    // Initalize variables and pointers
+    int x;
+    int count = 10;
+    int *int_pointer = NULL;
+
+    // Set the pointer to the address of count.
+    int_pointer = &count;
+
+    // Dereference the pointer to set the VALUE of the address of the pointer to the empty varaible x
+    x = *int_pointer;
+
+    // print count and x
+    printf("count = %i, x = %i \n", count, x); 
+    // print the value / address of the pointer. To do this we need to use the %p format specifier for printing
+    printf("pointer value: %p \n", int_pointer);
+    // We can use the address of operator in the print statements to see that value
+    printf("Address of the variable count: %p \n", &count);
+    // They are the same value. They should be the same value!
+    
+    // value at the address:
+    printf("Value at the address: %d \n", *int_pointer);
+    // print the value of the pointer itself
+    printf("Value of the pointer: %p \n", (void*)int_pointer);
+    // the cast to void* is to prevent a possible warning from the compiler.
+
+    // checking the number of bytes of a pointer, we can use the sizeof() operator
+    // cast it to a type int when printing
+    printf("Size of int_pointer: %d bytes \n", (int)sizeof(int_pointer));
+    // This changes depending on the OS (32 vs 64 bit) and the compiler.
 
     return 0;
 }
