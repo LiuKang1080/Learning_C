@@ -60,6 +60,15 @@
 
         - Creating a pointer only allocates memory to store the pointer itself, It does NOT allocate memory to store data.
         - Before using a pointer it should be assigned a memory location that has already been allocated.
+
+        - Testing for NULL. We can use if statements to test for NULL before initializing / using the pointers ourselves.
+            if (!p_value) {
+            }
+            
+            OR
+
+            if (p_value == NULL) {
+            }
 */
 
 
