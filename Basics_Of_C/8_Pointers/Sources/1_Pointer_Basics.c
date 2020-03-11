@@ -47,6 +47,19 @@
 
         result = *p_number_pointer + 5;
         // the value stored in my_number is 10, so we add 5 to it.
+
+    Testing for NULL
+        - There is one rule: DO NOT dereference a uninitialized pointer!
+
+        ex)
+        int *pt;    // an uninitialized pointer
+        *pt = 5;    // dereference the pointer and assign it te value of 5
+
+        - The 2nd line means to store the value of 5 in the location where pt points, pt has a random value, we have no knowing where 5 will be placed.
+        - It might go somewhere harmless, it might overwrite data / code, or it might cause the program to crash.
+
+        - Creating a pointer only allocates memory to store the pointer itself, It does NOT allocate memory to store data.
+        - Before using a pointer it should be assigned a memory location that has already been allocated.
 */
 
 
