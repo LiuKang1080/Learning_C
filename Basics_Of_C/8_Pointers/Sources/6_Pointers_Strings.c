@@ -50,8 +50,8 @@
 
 // string length function:
 int string_length (const char *pointer) {
-    // *pointer will automatically be pointing to the beginning of the array
-    // create a local pointer that traveses the length of the char array
+    // *pointer will automatically be pointing to the beginning of the array.
+    // create a local pointer that traverses the length of the char array.
     const char *p_local = pointer;
 
     while (*p_local) {
