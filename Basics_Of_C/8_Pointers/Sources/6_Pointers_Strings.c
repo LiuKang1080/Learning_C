@@ -48,10 +48,14 @@
 
 #include <stdio.h>
 
+
 // string length function:
 int string_length (const char *pointer) {
     // *pointer will automatically be pointing to the beginning of the array.
     // create a local pointer that traverses the length of the char array.
+    // We need to maintin const-ability whenever we can. When we're creating our local pointer if we do not create it as a const then 
+    //      we are casting away the const. Generally if a pointer is pointing to something that is a const, then we should create the 
+    //      pointer as a const pointer.
     const char *p_local = pointer;
 
     while (*p_local) {
