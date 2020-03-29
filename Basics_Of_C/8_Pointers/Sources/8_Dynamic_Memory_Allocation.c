@@ -142,7 +142,7 @@ int main() {
     if (p_text != NULL) {
         printf("Enter your text: \n");
         scanf(" ");
-        gets(p_text);
+        fgets(p_text, 1024, stdin);
 
         printf("You entered: %s \n", p_text);
     }
