@@ -36,7 +36,7 @@
             - Since the function returns an address a pointer is the only variable that can store it.
 
             General Syntax:
-            int *p_number = (int *)malloc(100);
+            int *p_number = malloc(100);
 
             - We request 100 bytes of memory to be allocated and assigned the memory block to p_number 
             - p_number will point to the first int location at the beginning of the 100 bytes that was allocated
@@ -48,10 +48,9 @@
                 sizeof() operator.
             
             General Syntax:
-            int *p_number = (int *)malloc(25 * sizeof(int));
+            int *p_number = malloc(25 * sizeof(int));
 
             - Here we are saying to allocate 25 blocks of int whatever the size of an int is.
-            - The cast (int *) converts the address returned by the function to the type "pointer" to an "int"
             - malloc() returns a pointer of type void, so we need to perform this cast.
             
             - We can request any number of bytes.
@@ -59,7 +58,7 @@
             - It is ALWAYS a good idea to check any dynamic memory allocation request immediately by using an if statement
                 to make sure the memory is actually there before we can use it
 
-            int *p_number = (int *)malloc(2500000 * sizeof(int));
+            int *p_number = malloc(2500000 * sizeof(int));
             if(!p_number) {
                 // code to deal with memory allocation failure;
             }
@@ -73,19 +72,84 @@
                 free the memory even if its right before the program end
             - The best programming practice is to ALWAYS manually release the memory when we're done using it.
 
-            - Memory Leaks = 
+            - Memory Leaks = When we allocate memory dynamically and we do not retain the reference to it, we are unbale to release
+                the memory. Often occurs within a loop, since we do not release the memory when it's no longer required, the program
+                consumes more and more memory in each loop iteration.
+            - To free the memory that we have dynamically allocated we must still have access to the address that references the 
+                block of memory.
 
+            - In order to release the memory we can call the free() function. Need to #include <stdlib.h> header file.
 
+            free(p_number);
+            p_number = NULL;
 
+            - the free() function has a formal parameter of type void* you can pass a pointer of any type as an argument.
+            - As long as p_number contains the address that was returned when the memory was allocated, the entire block will 
+                be freed.
+            - General programming guidelines suggest that we should set the pointer that was pointing to dynamically allocated 
+                memory to NULL after it has been freed.
+
+        2) calloc()  
+            - Similar to malloc(). It allocates memory as a number of elements of a given size, it initializes memory that is 
+                allocated so that all bytes are set to zero.
+            - calloc() takes in 2 arguments: 1) The number of data items for which space is allocated. 2) Size of each data item
+            - Requires the stdlib.h header file 
+
+            int *p_number = calloc(50, sizeof(*p_number))  // 50 spaces will be reserved of each being the size of an int
+
+            - The initilizations will be set to 0
+            - The return value will be NULL if it cannot allocate the space for whatever reason.
+
+        3) realloc()
+            - Enables us to extend memory that we previously allocated using malloc() or calloc()
+            - Expects 2 arguments: 1) A pointer that contains the address that was previously returned by a call to malloc() or
+                calloc(). 2) The size in bytes of the new memory that we want allocated.
+            - Returns a void* pointer to the new memory, or returns a NULL if the allocation fails for whatever reason
+            - Transfers the contents of the previously allocated memory referenced by the pointer 
+            - realloc() preserves the contents of the original memory area.
 */
 
 
 #include <stdio.h>
-// stdlib.h for the malloc(), calloc(), and realloc() functions 
+#include <string.h>
+// stdlib.h for the malloc(), calloc(), realloc(), and free() functions 
 #include <stdlib.h>
 
 
 int main() {
+    
+    /*
+        Dynamic Memory challenge:
+        - Write a program that allows a user to input text as a string. The program will print the text that was inputted.
+        - Program will use dynamic memory allocation. 
+        - user can enter the limit of the string they are entering, we can use it in malloc().
+        - Program uses a char pointer. Do not use char arrays.
+        - Release the memory after you're done using it.
+    */
+
+    // initialize variables and pointers
+    int size = 0;
+    char *p_text = NULL;
+
+    // ask user for the string size
+    printf("Enter the character limit of the text: ");
+    scanf("%d", &size);
+
+    // allocate memory 
+    p_text = malloc(size * sizeof(char));
+
+    // ensure that the memory allocation is successful
+    if (p_text != NULL) {
+        printf("Enter your text: \n");
+        scanf(" ");
+        gets(p_text);
+
+        printf("You entered: %s \n", p_text);
+    }
+
+    // free the memory we allocated
+    free(p_text);
+    p_text = NULL;
 
     return 0;
 }
