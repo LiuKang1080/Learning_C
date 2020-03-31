@@ -27,8 +27,42 @@
         - Technically the inner braces are not required, but general programming pracice suggests to have them for readability.
 
         - We can individually initialize an element within the array
+        
         struct date myDate[5] = { [2]={7, 15, 1992} };
+        
         - initialize the 3rd element of the array
+        - We can also initialize individually like this:
+
+        struct date myData[5] = { [1].month=12, [1].day=15 };
+
+    Structures containing arrays:
+        - Structs can contain arrays
+        - Arrays are members like other member variables within the struct
+
+        ex) struct called month that contains the number of days of the month, and a 3 letter char abbreviation for the month name
+
+        struct month {
+            int number_of_days;
+            char name[3];         // 3 characters for this array
+        };
+
+        - Memory is not allocated at this stage, this is just defining the struct and its members.
+        
+        - Accessing the individual elements and setting the values for the array within the struct:
+
+        // define variable of the dat type struct month
+        struct month first_month;
+
+        // set the values within the array 
+        first_month.number_of_days = 31;
+        first_month.name[0] = "J";
+        first_month.name[1] = "a";
+        first_month.name[2] = "n";
+
+        - We could also use the strcpy() function from <string.h> strcpy(first_month.name, "Jan");
+        - We can also initialize this way:
+
+        struct month first_month = {31, {'J', 'a', 'n'} }; 
 */
 
 
