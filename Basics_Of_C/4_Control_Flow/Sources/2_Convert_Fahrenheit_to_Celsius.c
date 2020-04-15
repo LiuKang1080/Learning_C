@@ -1,14 +1,18 @@
+// Fahrenheit to Celsius challenge
+
 /*
-A small program to convert degrees Fahrenheit to degrees Celsius.
-Requirements:
-    - Take in Fahrenheit via the command line.
-    - Convert Fahrenheit to Celsius and print the result using the general formula:
-        Celsius = (Fahrenheit - 32) * (5/9)
-    - Ensure that temperature does not go below 0 kelvin (-273.15 Celsius) (-459.67 Fahrenheit).
+    - A small program to convert degrees Fahrenheit to degrees Celsius.
+    - Requirements:
+        - Take in Fahrenheit via the command line.
+        - Convert Fahrenheit to Celsius and print the result using the general formula:
+            Celsius = (Fahrenheit - 32) * (5/9)
+        - Ensure that temperature does not go below 0 kelvin (-273.15 Celsius) (-459.67 Fahrenheit).
 */
+
 
 #include <stdio.h>
 #include <stdlib.h>
+
 
 int main(int argc, char *argv[]) {
 

@@ -1,12 +1,11 @@
-/*
-Guess The Number
-*/
+// Guess The Number challenge
 
 
-# include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 // we need to include the time module for the random number generator seed
+
 
 int main() {
 

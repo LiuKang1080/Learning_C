@@ -1,31 +1,31 @@
+// Loops in C
+
 /*
-For loops in C:
-    - Variables that are local to the loops will not exist once the loop ends.
+    For loops in C:
+        - Variables that are local to the loops will not exist once the loop ends.
+        - General syntax for the For Loop:
 
-General syntax for the For Loop:
+        for (starting_condition; continuing_condition; action_per_iteration) {
+            code block;
 
-for (starting_condition; continuing_condition; action_per_iteration) {
-    code block;
-}
+        }
 
-    - We can have multiple variables initialized in the starting_condition, we use the comma to seperate the variables
+        - We can have multiple variables initialized in the starting_condition, we use the comma to seperate the variables.
 
-General syntax for the While Loop:
+    General syntax for the While Loop:
+        - The code block will not execute if the expression is evaluated to false.
 
-while(expression) {
-    code block;
-}
+        while(expression) {
+            code block;
+        }
 
-    - The code block will not execute if the expression is evaluated to false
 
-General Syntax for the Do-While Loop:
+    General Syntax for the Do-While Loop:
+        - Since the expression evaluation is at the end of the do-while this is guarenteed to run at least once.
 
-do {
-    code block;
-} while(expression);
-
-    - Since the expression evaluation is at the end of the do-while this is guarenteed to run at least once.
-
+        do {
+            code block;
+        } while(expression);
 */
 
 
