@@ -1,15 +1,16 @@
-/*
-Operators challenge.
-Convert the number of minutes into days and years.
+// Operators challenge.
 
-Requirements:
-    - Create variables of the data type double.
-    - Allow user to enter in the number of minutes via the command line.
-    - Convert the number of minutes into days and years.
-    - Display the results days and years by printing the data.
+/*
+    - Convert the number of minutes into days and years challenge.
+
+    - Requirements:
+        - Create variables of the data type double.
+        - Allow user to enter in the number of minutes via the command line.
+        - Convert the number of minutes into days and years.
+        - Display the results days and years by printing the data.
 */
 
-#include <stdio.h>
+
 #include <stdlib.h>
 
 
