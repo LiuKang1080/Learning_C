@@ -1,8 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
+// Hello World Test in C
 
-// Hello World test in C
+#include <stdio.h>
+
+
 int main() {
-    printf("Hello World!");
+    printf("Hello World! \n");
+    
     return 0;
 }
