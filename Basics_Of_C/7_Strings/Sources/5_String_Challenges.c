@@ -1,20 +1,21 @@
+// String challenges
 /* 
-3 challenges for working with strings:
+    3 challenges for working with strings:
 
-1) Given a string, create a function that will count the number characters in that string.
-    - cannot use strlen() function 
-    - return an int for the length 
+        1) Given a string, create a function that will count the number characters in that string.
+            - cannot use strlen() function 
+            - return an int for the length 
 
-2) Write a function to concatenate 2 character strings
-    - cannot use the strcat() function 
+        2) Write a function to concatenate 2 character strings
+            - cannot use the strcat() function 
 
-3) Write a function that compares 2 strings to see if they are equal
-    - takes in 2 arguments 
-    - returns a boolean
+        3) Write a function that compares 2 strings to see if they are equal
+            - takes in 2 arguments 
+            - returns a boolean
 
-4) Write a function that takes in an array of character strings and reverses it 
-    - can use the strlen(), strcpy(), and the other standard string functions that are in the string library
-    - #include <string.h>
+        4) Write a function that takes in an array of character strings and reverses it 
+            - can use the strlen(), strcpy(), and the other standard string functions that are in the string library
+            - #include <string.h>
 */
 
 
