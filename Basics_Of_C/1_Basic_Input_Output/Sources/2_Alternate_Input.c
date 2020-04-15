@@ -1,5 +1,7 @@
-// Alternative form for reading inputs from keyboard
+// Alternative form for reading inputs from the keyboard
+
 #include <stdio.h>
+
 
 int main() {
     //Create a variable called name:
