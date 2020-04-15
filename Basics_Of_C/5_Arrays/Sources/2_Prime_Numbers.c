@@ -1,8 +1,8 @@
 /*
-Prime Numbers challenge:
-    - Find all the prime numbers from 1 to 100 (Use an array)
-    - 1 and 2 can be hard coded since we know the first 2 are prime numbers 
-    - we can skip all even numbers since they're not prime
+    Prime Numbers challenge:
+        - Find all the prime numbers from 1 to 100 (Use an array)
+        - 1 and 2 can be hard coded since we know the first 2 are prime numbers 
+        - we can skip all even numbers since they're not prime
 */
 
 
