@@ -24,9 +24,8 @@ int main() {
     printf("Welcome to the guessing game! \n");
     printf("You have 5 chances to guess the number I have chosen between 0 and 20. \n");
 
-    for(number_of_guesses = 5; number_of_guesses > 0; number_of_guesses--) {
-        
-        if(number_of_guesses == 1) {
+    for (number_of_guesses = 5; number_of_guesses > 0; number_of_guesses--) {
+        if (number_of_guesses == 1) {
             printf("You have 1 guess left! \n");
         } else {
             printf("You have %d guesses left! \n", number_of_guesses);
@@ -35,14 +34,14 @@ int main() {
         printf("Enter your guess: ");
         scanf("%d", &user_guess);
 
-        if(user_guess == random_number) {
+        if (user_guess == random_number) {
             printf("Congratulations! You guessed the correct number! \n");
             return 0;
-        } else if(user_guess < 0 || user_guess > 20) {
-            printf("please enter a number between 0 and 20 ");
-        } else if(random_number > user_guess) {
+        } else if (user_guess < 0 || user_guess > 20) {
+            printf ("please enter a number between 0 and 20 ");
+        } else if (random_number > user_guess) {
             printf("Sorry! My number is higher than what you entered! ");
-        } else if(random_number < user_guess) {
+        } else if (random_number < user_guess) {
             printf("Sorry! My number is less than what you entered! ");
         }
     }

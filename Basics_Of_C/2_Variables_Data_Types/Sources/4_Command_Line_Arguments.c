@@ -1,6 +1,7 @@
 // Using command line arguments to pass data into the program.
 
 /*
+Command Line Arguments in C Programs:
     - Generally there are 2 ways to pass data into a program:
         1) Take the data from the user directly via inputs.
         2) Supply the data into the program at the time of execution using command line arguments.

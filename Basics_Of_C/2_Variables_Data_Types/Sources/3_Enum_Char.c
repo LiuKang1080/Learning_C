@@ -1,5 +1,6 @@
 // Enums and Char 
 
+
 #include <stdio.h>
 #include <stdbool.h>
 
