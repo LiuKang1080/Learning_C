@@ -1,21 +1,21 @@
-// String challenges
+// String challenges in C
+
 /* 
-    3 challenges for working with strings:
+3 challenges for working with strings:
+    1) Given a string, create a function that will count the number characters in that string.
+        - cannot use strlen() function 
+        - return an int for the length 
 
-        1) Given a string, create a function that will count the number characters in that string.
-            - cannot use strlen() function 
-            - return an int for the length 
+    2) Write a function to concatenate 2 character strings
+        - cannot use the strcat() function 
 
-        2) Write a function to concatenate 2 character strings
-            - cannot use the strcat() function 
+    3) Write a function that compares 2 strings to see if they are equal
+        - takes in 2 arguments 
+        - returns a boolean
 
-        3) Write a function that compares 2 strings to see if they are equal
-            - takes in 2 arguments 
-            - returns a boolean
-
-        4) Write a function that takes in an array of character strings and reverses it 
-            - can use the strlen(), strcpy(), and the other standard string functions that are in the string library
-            - #include <string.h>
+    4) Write a function that takes in an array of character strings and reverses it 
+        - can use the strlen(), strcpy(), and the other standard string functions that are in the string library
+        - #include <string.h>
 */
 
 
@@ -25,7 +25,7 @@
 #include <string.h>
 
 
-// define string length function for challenge 1
+// define string length function for challenge 1:
 int string_length(const char string[]) {
     int count = 0;
     
@@ -36,8 +36,8 @@ int string_length(const char string[]) {
     return count;
 }
 
-// define concatenation function for challenge 2
-void concat_function (char result[], const char str1[], const char str2[]) {
+// define concatenation function for challenge 2:
+void concat_function(char result[], const char str1[], const char str2[]) {
     int i = 0;
     int j = 0;
 
@@ -53,7 +53,7 @@ void concat_function (char result[], const char str1[], const char str2[]) {
     result[i + j] = '\0'; 
 }
 
-// define compare function for challege 3
+// define compare function for challege 3:
 bool compare_function(const char str1[], const char str2[]) {
     int i = 0;
     bool is_equal = false;
@@ -71,7 +71,7 @@ bool compare_function(const char str1[], const char str2[]) {
     return is_equal;
 }
 
-// define string reverse function for challenge 4
+// define string reverse function for challenge 4:
 void string_reverse(const char str1[]) {
     // initialize local variables 
     int i;

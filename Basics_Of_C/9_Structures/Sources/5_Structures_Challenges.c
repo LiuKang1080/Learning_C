@@ -1,37 +1,37 @@
 // Structure Challenges in C
 
 /*
-    Structure Challenges:
+Structure Challenges:
 
-    Challenge 1:
-        - Write a program that declares a structure and prints out its contents.
-        - Create an employee strcuture with 3 members:
-            - name (character array) 
-            - hire_date (int)
-            - salary (float)
+Challenge 1:
+    - Write a program that declares a structure and prints out its contents.
+         Create an employee strcuture with 3 members:
+        - name (character array) 
+        - hire_date (int)
+        - salary (float)
         
-        - Declare and initialize an instance of an employee type.
-        - Read in a second employee and store it in a structure of type employee.
-        - Print out the contents of each employee.
+    - Declare and initialize an instance of an employee type.
+    - Read in a second employee and store it in a structure of type employee.
+    - Print out the contents of each employee.
 
-    Challenge 2:
-        - Write a C program that creates a structure pointer and passes it to a function.
-        - Create a struct named "item" with the members:
-            - item_name: pointer
-            - quantity: int
-            - price: float
-            - amount: float (stores quantity * price)
+Challenge 2:
+    - Write a C program that creates a structure pointer and passes it to a function.
+    - Create a struct named "item" with the members:
+        - item_name: pointer
+        - quantity: int
+        - price: float
+        - amount: float (stores quantity * price)
 
-        - Create a function named read_item that takes a struct pointer of type item as a parameter.
-        - Function should read in from the user a product name, price, and quantity.
-        - The contents read in should be stored in the struct which will be passed into the function.
+    - Create a function named read_item that takes a struct pointer of type item as a parameter.
+    - Function should read in from the user a product name, price, and quantity.
+    - The contents read in should be stored in the struct which will be passed into the function.
         
-        - Create a function named print_item that takes as a parameter a struct pointer of type item.
-        - Function prints the contents of the parameter.
+    - Create a function named print_item that takes as a parameter a struct pointer of type item.
+    - Function prints the contents of the parameter.
 
-        - The main() function should declare an item and a pointer to the item.
-        - Allocate memory for the item_name pointer.
-        - The item pointer should be passed into both the read and print item functions.
+    - The main() function should declare an item and a pointer to the item.
+    - Allocate memory for the item_name pointer.
+    - The item pointer should be passed into both the read and print item functions.
 */
 
 
@@ -50,6 +50,7 @@ struct item {
 // Function declarations for challenge 2:
 void read_item(struct item *i);
 void print_item(struct item *i);
+
 
 int main() {
     /*
@@ -117,6 +118,7 @@ int main() {
     
     return 0;
 }
+
 
 void read_item(struct item *i) {
     printf("Enter product name: ");

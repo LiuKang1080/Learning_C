@@ -1,39 +1,37 @@
-// More string functions in C
+// More String Functions in C
 
 /*
+More General String Functions From the C Strandard:
     - General purpose string functions are located in the string.h header file
-        #include <string.h>
+    - We must first #include the <string.h> header file in order to use these functions.
 
-    Searching, Tokenizing, and Analyzing Strings in C
-
-    - Searching Strings:
-        Search a string to find a single character or a substring, we can use strchr() and strstr() functions.
-    
-        strchr() is used for searching for a single character in a string. The first argument is the string to be searched,
+Searching, Tokenizing, and Analyzing Strings in C
+Searching Strings:
+    - Search a string to find a single character or a substring, we can use strchr() and strstr() functions.
+    - strchr() is used for searching for a single character in a string. The first argument is the string to be searched,
         the second argument is the character we're looking for. Function will search the string from the beginning and return
         a pointer to the first position in the string where the character is found. If the character is not found it will return 
         NULL 
     
-        strstr() is used for searching for a substring within a string. The search IS case sensitive! First argument is the 
+    - strstr() is used for searching for a substring within a string. The search IS case sensitive! First argument is the 
         string to be searched, the second argument is the substring to be found
 
-    - Tokenizing Strings:
-        A token is a sequence of characters within a string that is found by a delimiter(space, comma, period, etc).
-        Breaking a sentence into words is called tokenizing.
+Tokenizing Strings:
+    - A token is a sequence of characters within a string that is found by a delimiter(space, comma, period, etc).
+    - Breaking a sentence into words is called tokenizing.
+    - We use the strtok() function.
 
-        We use the strtok() function.
-
-    - Analyzing Strings:
-        There are many functions relating to analyzing strings 
+Analyzing Strings:
+    - There are many functions relating to analyzing strings:
         - islower()     Test to see if character is lower 
         - isupper()     Test to see if character is upper
         - isalpha()     Test to see if character is alpha character
         - isdigit()     Test to see if character is a digit 
 
-        NOTE: These functions are not located in string.h! They are located in ctype.h
-        #include <ctype.h>
+    - NOTE: These functions are not located in string.h! They are located in <ctype.h>
+    - In order to use these function we must first #include the <ctype.h> header file.
 
-        generally these functions will return pointers.
+    - generally these functions will return pointers.
 */
 
 
@@ -43,12 +41,13 @@
 
 
 int main() {
-    
     // Tokenization example
     char str[100] = "Hello, how are you - my name is - Shiva";
+    
     // the delimiter 
     const char s[2] = "-";
     char *token;
+    
     // get the 1st token 
     token = strtok(str, s);
 
@@ -59,7 +58,6 @@ int main() {
     }
 
     printf("\n");
-
 
     // Example to find the number of letters and numbers in a given a string
     // initialize variables
@@ -77,6 +75,7 @@ int main() {
         } else if (ispunct(my_string[i])) {
             n_punctuation++;
         }
+        
         i++;
     }
 

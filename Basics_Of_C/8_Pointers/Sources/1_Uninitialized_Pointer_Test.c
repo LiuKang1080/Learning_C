@@ -11,11 +11,13 @@
 int main() {
     //uninitialized pointer
     // int *pt;
+    
     // print the value of the pointer to see what it is:
     // printf("The value of the pt is: %p \n", pt);
 
     // dereference the pointer and assign a value
     // *pt = 5;
+    
     // print the value of the pointer
     // printf("Value of pt: %p \n", *pt);
 

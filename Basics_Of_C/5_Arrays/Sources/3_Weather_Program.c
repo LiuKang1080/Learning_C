@@ -1,5 +1,8 @@
-/* 
-    Weather Program challenge:
+// Weather Program Challenge in C
+
+/*
+Weather Program challenge:
+    - Requirements:
         - Create a program that takes in rain fall data to calculate the average total rain fall over the course of 5 years. 
         - Find the total rain fall for each year.
         - Rain fall data are floats within a 2D array.
@@ -11,7 +14,6 @@
 
 
 int main() {
-
     // initialize the rain fall data (12 months, over 5 years)
     // dummy data is provided by Tim Buchalka's Learn Programming Academy - C Programming for beginners [Lecture 55]
     float rain_fall_data[5][12] = {
@@ -28,15 +30,14 @@ int main() {
     yearly_total = 0.00;
     // find the total rain fall for a year
     for (int i = 0; i < 5; i++) {
-
         monthly_sum = 0.00;
 
         for (int j = 0; j < 12; j++) {
             monthly_sum += rain_fall_data[i][j];
         }
 
-        printf("Year: %d The total rain fall this year is: %0.2lf inches \n", i+1, monthly_sum);
-        printf("The monthly rain fall aveage for Year: %d is %0.2lf inches \n", i+1, monthly_sum/12);
+        printf("Year: %d The total rain fall this year is: %0.2lf inches \n", i + 1, monthly_sum);
+        printf("The monthly rain fall aveage for Year: %d is %0.2lf inches \n", i + 1, monthly_sum / 12);
 
         // The average of the total rain fall = total rain fall over all years / total number of years.
         yearly_total += monthly_sum;
@@ -45,7 +46,7 @@ int main() {
     }
 
     // print the average total yearly rain fall 
-    printf("The average of total rain fall over the course of 5 years: %0.2lf inches \n", yearly_total/5);
+    printf("The average of total rain fall over the course of 5 years: %0.2lf inches \n", yearly_total / 5);
 
     return 0;
 }
