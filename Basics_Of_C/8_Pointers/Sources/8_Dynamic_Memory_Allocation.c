@@ -1,7 +1,7 @@
 // Dynamic Memory Allocation in C
 
 /*
-Dynamic Memory Allocation
+Dynamic Memory Allocation:
     - Can only be done on pointers 
     - Whenever we define a varaible in C, the compiler automatically allocates the correct amount of memory for that data type.
     - Using C's memory allocation ruotines we can dynamically alloate storage while the program is running.
@@ -13,7 +13,7 @@ Dynamic Memory Allocation
             as we need it. Enables us to allocate memory as the program is running. Allocating memory dynamically is only possible
             because we have pointers available.
 
-Heap vs Stack
+Heap vs Stack:
     - Dynamic memory allocation reserves space in a memory area called the heap.
     - The Stack: Another location where memory is allocated. Function arguments and local variables in a function are stored 
         here. When the execution of a function ends the space allocated to store the arugments and local variables are freed.
@@ -24,7 +24,7 @@ Heap vs Stack
     - We get to control when things enter the heap and when it gets deleted. We have NO control over what / when data enters
         and gets deleted in the stack, the compiler will automatically do that for us.
 
-Dynamic Memory Allocation Functions
+Dynamic Memory Allocation Functions:
     - There are 3 major function that we can use in C to dynamically allocate memeory: malloc, calloc, and realloc
     - In order to use these function we need to include the stdlib.h header file.
         
@@ -33,7 +33,6 @@ Dynamic Memory Allocation Functions
         - We specify the number of bytes of memory we want to allocate as the argument.
         - This function returns the address of the first byte of memory that is allocated.
         - Since the function returns an address a pointer is the only variable that can store it.
-
         - General Syntax:
             
             int *p_number = malloc(100);
@@ -81,8 +80,8 @@ Dynamic Memory Allocation Functions
 
             - In order to release the memory we can call the free() function. Need to #include <stdlib.h> header file.
 
-            free(p_number);
-            p_number = NULL;
+                free(p_number);
+                p_number = NULL;
 
             - The free() function has a formal parameter of type void* you can pass a pointer of any type as an argument.
             - As long as p_number contains the address that was returned when the memory was allocated, the entire block will 

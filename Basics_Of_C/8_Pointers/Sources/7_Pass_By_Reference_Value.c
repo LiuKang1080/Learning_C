@@ -7,14 +7,14 @@ Pass By Value | Pass By Reference in C:
         2) Pass by Reference
         
     - C exculusively passes data into function by Value.
-    - It simulates pass bhy reference because it can copy addresses.
+    - It simulates pass by reference because it can copy addresses.
 
     - Pass by Value = is when a function copies the actual value of an argument into the formal parameter of the function. 
         Changes made to the parameter inside the function have no effect on the argument.
     - Ex) passing in a int or double variable into the parameter of a function the variable outside does not change, because it 
         is copied.
     - Code within the function cannot change the arguments used to call the function.
-    - There are no changes in the values, though theyt had been changed inside the function.
+    - There are no changes in the values, though they had been changed inside the function.
 
 Passing Data Using Pointers:
     - You can pass a pointer as an argument into a function
@@ -23,7 +23,7 @@ Passing Data Using Pointers:
 Pass By Reference:
     - Copies the address of an argument into the formal parameter. The address is used to access the actual argumnet used the
         function call.
-    - The changes made to the parameter affect the passed argument.
+    - The changes made to the parameter affects the passed argument.
     - Changes made inside are reflected outside the function unlike pass by value. 
     - We need to declare the function parameters as pointer types.
     - With pass by reference we do not need to use globabl varaibles. General programming guidelines suggest NOT using global
