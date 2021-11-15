@@ -3,7 +3,7 @@
 /*
 Pointer Basics:
     - A pointer is a variable whose value is a memory address.
-    - Its value is the address of another location in memory that can caontain a value.
+    - Its value is the address of another location in memory that can contain a value.
     - Provides an indirect means of accessing the value of a particular data item.
     - Memory address are represented as hexadecimal values.
     - EVERY pointer will be associated with a specific data type. It can be used to point to a variable of that data type.
@@ -11,21 +11,25 @@ Pointer Basics:
 Defining a pointer: 
     - Defining a pointer is not like defining a regular variable, the syntax is slightly different
     - There is no pointer keyword / data type like there is with int, float, double...
-    - general syntax:
+    - General syntax:
         
         data_type *p_pointer_name;
 
-    - Ex) int *p_my_pointer;
+    - Ex) int *my_ptr;
     - The * signifies that this variable is a pointer and is of the data type int.
     - The above syntax does not initialize the pointer to anything, it can be dangerous when it is not initialized
     - You should ALWAYS initialize a pointer when you declare it!
 
     - If you do not know what to initialize the pointer to, initialize it as a NULL pointer (a pointer that points to nothing.)
-    - Ex) int *pnumber = NULL;
+    - Ex) 
+    
+        int *num_ptr = NULL;
+
     - NULL is equvalent to zero. It is guarenteed to not point to anything in memory. This prevents accidental overwriting in memory.
     - The NULL pointer is NOT the same as the Null Terminator ('\0')
 
-    - If we need to explicitly need to use the NULL pointer definition we need to include the stddef.h header file
+    - If we need to explicitly need to use the NULL pointer definition we need to #include the <stddef.h> header file.
+        
         #include <stddef.h>
 
 Address Of Operator:
@@ -39,33 +43,33 @@ Accessing the value a pointer is pointing to:
     - Ex)
 
         int my_number = 10;
-        int *p_number_pointer = &my_number;
+        int *num_ptr = &my_number;
         int result = 0;
         // we initialize the number, result, and the pointer, if we want to use the value the pointer is pointing to we need to dereference it.
 
-        result = *p_number_pointer + 5;
+        result = *num_ptr + 5;
         // the value stored in my_number is 10, so we add 5 to it.
 
 Testing for NULL:
     - There is one rule: DO NOT dereference a uninitialized pointer!
     - Ex)
         
-        int *pt;    // an uninitialized pointer
-        *pt = 5;    // dereference the pointer and assign it te value of 5
+        int *ptr;    // an uninitialized pointer
+        *ptr = 5;    // dereference the pointer and assign it the value of 5
 
-    - The 2nd line means to store the value of 5 in the location where pt points, pt has a random value, we have no knowing where 5 will be placed.
+    - The 2nd line means to store the value of 5 in the location where ptr points, ptr has a random value, we have no knowing where 5 will be placed.
     - It might go somewhere harmless, it might overwrite data / code, or it might cause the program to crash.
     - Creating a pointer only allocates memory to store the pointer itself, It does NOT allocate memory to store data.
     - Before using a pointer it should be assigned a memory location that has already been allocated.
-    - Testing for NULL. We can use if statements to test for NULL before initializing / using the pointers ourselves.
+    - Testing for NULL: We can use if statements to test for NULL before initializing / using the pointers ourselves.
         
-        if (!p_value) {
+        if (!ptr_value) {
             // code block;    
         }
             
         OR
 
-        if (p_value == NULL) {
+        if (ptr_value == NULL) {
             // code block
         }
     
@@ -107,7 +111,7 @@ int main() {
     printf("Value at the address: %d \n", *int_pointer);
     
     // print the value of the pointer itself
-    printf("Value of the pointer: %p \n", (void*)int_pointer);
+    printf("Value of the pointer: %p \n", (void *)int_pointer);
     // the cast to void* is to prevent a possible warning from the compiler.
 
     // checking the number of bytes of a pointer, we can use the sizeof() operator
