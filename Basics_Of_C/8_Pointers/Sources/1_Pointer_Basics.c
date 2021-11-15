@@ -70,7 +70,7 @@ Testing for NULL:
         OR
 
         if (ptr_value == NULL) {
-            // code block
+            // code block;
         }
     
     - The first code block will only run if the pointer is not NULL, this is good programming practice, and is the standard.

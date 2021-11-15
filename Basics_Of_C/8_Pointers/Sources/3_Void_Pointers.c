@@ -6,7 +6,7 @@ Void Pointers:
     - A pointer of the type void* can contain the address of a data item of any type.
     - Void* is usually used as a parameter or return type with functions that deal with data in a type-independent way.
 
-    - Because the void* pointer allows us to deal with all data types does not mean we can abuse this concept and just use everywhere.
+    - Just because the void* pointer allows us to deal with all data types does not mean we can abuse this concept and just use everywhere.
         
     - We need to cast to a specific data type when we dereference the void* pointer.  
     - The void pointer does not know what type of object it is pointing to so it cannot be dereferenced directly.
